@@ -1,0 +1,19 @@
+div.topNav {
+    background-color: rgba(214, 144, 238, 0.134);
+    padding: 5px 10px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-content: stretch;
+        flex-wrap: wrap;
+        li {
+            list-style-type: none;
+            div.hero {
+                display: flex;
+                img {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}

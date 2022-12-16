@@ -1,0 +1,90 @@
+.alertBody{
+    position: fixed;
+    top: 10px !important;
+    z-index: 200;
+    color: #fff;
+    width: 24em;
+    height: min-content;
+    right: 25px !important;
+    .card-header.success, .card-body.success  {
+        background-color: #8297e4a1;
+    }
+    .card-header.failure, .card-body.failure  {
+        background-color: #cf1212a1;
+    }
+    .card-header {
+        h4{
+            font-weight: 500;
+            font-size: smaller;
+            text-transform: uppercase;   
+        }
+        div.cls-btn {
+            position: absolute;
+            cursor: pointer;
+            right: 10px;
+            top: 5px;
+        }
+    }
+    .card-body {
+        background-color: #8297e4a1;
+        height: 60px;
+    }
+}
+
+.loader {
+    background-color: rgba(150, 52, 198, 0.19);
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    bottom: 0;
+    position: absolute;
+    .spinner {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        top: 10vh;
+        left: -5vw;
+        margin: 100px auto;
+      }
+      
+      .double-bounce1, .double-bounce2 {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #333;
+        opacity: 0.6;
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+        animation: sk-bounce 2.0s infinite ease-in-out;
+      }
+      
+      .double-bounce2 {
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+      }
+      
+      @-webkit-keyframes sk-bounce {
+        0%, 100% { -webkit-transform: scale(0.0) }
+        50% { -webkit-transform: scale(1.0) }
+      }
+      
+      @keyframes sk-bounce {
+        0%, 100% { 
+          transform: scale(0.0);
+          -webkit-transform: scale(0.0);
+        } 50% { 
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+        }
+      }
+}
+
+
+@media only screen and (max-width: 425px) {
+    .alertBody {
+        right: 0;
+    }
+}

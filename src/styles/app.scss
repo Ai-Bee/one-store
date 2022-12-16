@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .centered-child {
+    text-align: center;
+  }
+}
+
+.productCards {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.login-page {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 35% 65%;
+  div.form-component {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    align-content: start;
+    justify-content: center;
+    .btn-group {
+        display: flex;
+        align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+      button {
+        border: 1px solid #38414a;
+        border-radius: 10px;
+        width: max-content;
+        height: 40px;
+        background-color: #fff;
+        transition: all 0.5s ease-out;
+        color: #38414a;
+        padding: 10px 10px;
+      }
+      button:hover {
+        color: #fff;
+        background-color: #1a1d21;
+      }
+    }
+  }
+  div.decoration {
+    background-color: #c6beb5;
+    background-image: url("../assets/ecommerce.gif");
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.setup-section {
+    display: grid;
+  height: 77vh;
+  grid-template-columns: 60% 40%;
+  div.form-component {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    align-content: start;
+    justify-content: center;
+  }
+  div.decoration {
+    background-color: #38414a;
+    background-image: url("../assets/ecommerce.gif");
+    background-blend-mode: exclusion;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .login-page  {
+      background-image: linear-gradient(to bottom, #5d93e5, #7992eb, #9591ef, #b08eef, #ca8bed);
+      display: flex;
+      div.decoration {
+        display: none;
+      }
+      div.form-component {
+        padding-left: 25px;
+      }
+  }
+  .productCards {
+    align-items: center;
+    iframe#music {
+      display: none;
+    }
+  }
+}

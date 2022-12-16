@@ -1,0 +1,7 @@
+.landing {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #5d93e5, #7992eb, #9591ef, #b08eef, #ca8bed);
+    h1 > span {
+        font-style: italic;
+    }
+}

@@ -1,26 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <NavBar/>
+  <div id="app">
+  <router-view></router-view>
+  <div v-if="notificationStore.show">
+    <GenericAlertVue/>
+  </div>
+  <div v-if="notificationStore.loading">
+    <LoaderComponent/>
+  </div>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import GenericAlertVue from './components/GenericAlert.vue';
+import LoaderComponent from './components/LoaderComponent.vue';
+import NavBar from './components/NavBar.vue';
+import { useNotification } from "./store/index";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+let notificationStore = useNotification();
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss" src="./styles/app.scss"/>

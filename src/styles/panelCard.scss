@@ -1,0 +1,119 @@
+aside.side {
+  width: 30vw;
+  overflow-y: scroll;
+  flex: none;
+  transition: all 2s ease-in;
+  transform: translateX(0vw);
+  background-color: rgba(40, 31, 41, 0.831);
+  transition: all 1.5s ease-in;
+  position: fixed;
+  color: #fff;
+  right: 0px;
+  top: 0px;
+  border-radius: 11px 0 0 11px;
+  height: 100vh;
+  border: 1px solid #80808042;
+  .panel-product-card {
+    display: flex;
+    padding-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    div.image {
+      padding-bottom: 15px;
+      position: relative;
+      .close-btn {
+        position: fixed;
+        top: 0;
+        z-index: 20;
+        right: 12px;
+        cursor: pointer;
+      }
+      img.main {
+        max-width: 400px;
+        border-radius: 10px;
+        filter: drop-shadow(0 0 0.35rem rgb(213, 210, 210));
+        transition: all 1s ease-out;
+      }
+      img.main:hover {
+        transform: scale(1.04);
+      }
+      div.img-row {
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-evenly;
+        img,
+        video {
+          cursor: pointer;
+          border-radius: 6px;
+          max-width: 60px;
+          max-height: 60px;
+        }
+      }
+    }
+    .btm-row {
+      padding-top: 15px;
+      padding-left: 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: start;
+      .cart-btn {
+        background-color: darkcyan;
+        color: #ffff;
+        margin-top: 70px;
+        border-radius: 30px;
+        height: 45px;
+        width: 140px;
+        transition: all 1s ease-in-out;
+      }
+      .cart-btn:hover {
+        background-color: rgb(5, 168, 168);
+      }
+      .color {
+        display: flex;
+        gap: 10px;
+        padding-bottom: 10px;
+        font-size: small;
+        .oneColor {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+        .oneColor.active {
+          border: 2px solid #989dcd;
+          padding: 5px;
+        }
+      }
+      .sizes {
+        display: flex;
+        gap: 10px;
+        font-size: small;
+        padding-bottom: 10px;
+        .oneSize {
+          cursor: pointer;
+          text-align: center;
+        }
+        .oneSize:hover {
+          text-decoration: underline;
+        }
+        .oneSize.active {
+          border: 1px solid rgb(160, 154, 154);
+          font-weight: bolder;
+          height: 25px;
+          width: 25px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  aside.side {
+    width: 100vw;
+    border-radius: 0;
+  }
+}
